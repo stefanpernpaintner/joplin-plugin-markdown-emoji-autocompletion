@@ -1,5 +1,5 @@
 {
-  "name": "joplin-plugin-text-replacer",
+  "name": "joplin-plugin-markdown-emoji-autocompletion",
   "version": "1.0.0",
   "scripts": {
     "dist": "webpack --env joplin-plugin-config=buildMain && webpack --env joplin-plugin-config=buildExtraScripts && webpack --env joplin-plugin-config=createArchive",

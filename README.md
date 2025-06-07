@@ -10,3 +10,11 @@ The typical way to install plugins is through the built-in Joplin plugin manager
 * Go to Tools → Options → Plugins
 * Search for "Markdown Emoji Autocomplete" in the search box
 * Click Install and restart Joplin
+
+If you prefer to install the plugin manually, you can do so by following these steps:
+
+* Download the [plugin jpl](https://github.com/joplin/plugins/raw/master/plugins/de.pernpas.joplin.markdown.emoji.autocomplete/plugin.jpl)
+* Go to `Tools -> Options -> Plugins`
+* Click on the gear icon and select "Install from file"
+* Select the downloaded jpl file
+* Restart Joplin
