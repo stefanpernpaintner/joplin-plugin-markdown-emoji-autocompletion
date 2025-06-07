@@ -18,3 +18,9 @@ If you prefer to install the plugin manually, you can do so by following these s
 * Click on the gear icon and select "Install from file"
 * Select the downloaded jpl file
 * Restart Joplin
+
+## Feedback
+If you have any feedback, suggestions, or issues, please open an issue on the [GitHub repository](https://github.com/stefanpernpaintner/joplin-plugin-markdown-emoji-autocompletion)
+
+## License
+This plugin is licensed under the [MIT License](https://github.com/stefanpernpaintner/joplin-plugin-markdown-emoji-autocompletion/blob/main/LICENSE)
