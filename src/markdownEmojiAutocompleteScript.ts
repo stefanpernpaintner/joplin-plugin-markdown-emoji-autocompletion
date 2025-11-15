@@ -11,13 +11,13 @@ export default (context: { contentScriptId: string, postMessage: any }) => {
             console.info('content script loaded');
 
             const completionSource = Object.entries(emojiKeyToUnicodeMapping).map(([key, unicode]) => {
-                    const codePoints = unicode.split('-').map(hex => parseInt(hex, 16));
-                    const emoji = String.fromCodePoint(...codePoints);
-                    return {
-                        label: `:${key}:` + emoji,
-                        apply: emoji,
-                    };
-                });
+                const codePoints = unicode.split('-').map(hex => parseInt(hex, 16));
+                const emoji = String.fromCodePoint(...codePoints);
+                return {
+                    label: `:${key}:` + emoji,
+                    apply: emoji,
+                };
+            });
 
             codeMirrorWrapper.addExtension([
                 codeMirrorWrapper.joplinExtensions.completionSource(
@@ -30,8 +30,5 @@ export default (context: { contentScriptId: string, postMessage: any }) => {
             ]);
 
         },
-        // assets: () => {
-        //     return [{name: './style.css'}];
-        // },
     };
 };
