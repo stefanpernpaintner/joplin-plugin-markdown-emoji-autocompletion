@@ -10,11 +10,15 @@ export default (context: { contentScriptId: string, postMessage: any }) => {
 
             console.info('content script loaded');
 
+            // Get the setting from the main plugin via postMessage
+            const triggerCharacter = await context.postMessage('getTriggerCharacter');
+            console.info(`trigger character loaded: ${triggerCharacter}`);
+
             const completionSource = Object.entries(emojiKeyToUnicodeMapping).map(([key, unicode]) => {
                 const codePoints = unicode.split('-').map(hex => parseInt(hex, 16));
                 const emoji = String.fromCodePoint(...codePoints);
                 return {
-                    label: `:${key}:` + emoji,
+                    label: `${triggerCharacter}${key}${triggerCharacter}${emoji}`,
                     apply: emoji,
                 };
             });
